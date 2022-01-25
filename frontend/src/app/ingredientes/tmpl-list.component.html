@@ -1,0 +1,19 @@
+<table>
+  <tr>
+    <th>Lista de ingredientes</th>
+    <th colspan="2"><button class="añadir-ingredientes-boton" routerLink="add">Añadir</button></th>
+  </tr>
+  <tbody>
+    <tr *ngFor="let item of VM.Listado">
+      <td>
+        <a routerLink="{{ item.id }}/edit"> {{ item.nombre }}</a>
+      </td>
+      <td>
+        <button class="editar-ingredientes-boton" [routerLink]="[item.id, 'edit']">Editar</button>
+      </td>
+      <td>
+        <button class="borrar-ingredientes-boton" (click)="VM.delete(item.id)">Borrar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

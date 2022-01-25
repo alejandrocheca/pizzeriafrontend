@@ -1,0 +1,14 @@
+:root {
+  --navbarActive: #e2001a;
+  --backgroundNavbar: #202020;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #eeeeee;
+}

@@ -1,0 +1,14 @@
+<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+
+<div *ngFor="let item of VM.Listado" class="container">
+  <div class='item'>
+    <span class='precio-item'>{{item.precio}} €</span>
+    <a href="444mirror.html"><img src="{{item.imgUrl}}" alt="Foto de {{item.nombre}}" width="250" height="250"></a>
+    <div class='titulo-item'><a routerLink="/pizzas/{{item.id}}">{{item.nombre}}</a></div>
+    <input class='añadir-carro' type="image" src="../../../assets/images/comprar.png" (click)="carrito.add(item.id, item.precio, 1)" alt="Añadir al carro: {{item.nombre}}">
+  </div>
+</div>
+
+
+
+
